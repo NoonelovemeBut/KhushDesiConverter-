@@ -1,1 +1,5 @@
-ref: refs/heads/main
+0000000000000000000000000000000000000000 4d68d2b3e42b6e39b6a2f849113f655481c8b9b3 agent <agent@replit.com> 1775855023 +0000	commit (initial): Initial commit
+4d68d2b3e42b6e39b6a2f849113f655481c8b9b3 74ff86845908adf860041a4300e17a6150adaf43 chemistryrasaay <57662935-chemistryrasaay@users.noreply.replit.com> 1776120006 +0000	commit: Add AI-powered text conversion feature with style and persona options
+74ff86845908adf860041a4300e17a6150adaf43 49589a39d846d023e39b0b2140859d2b3a604702 chemistryrasaay <57662935-chemistryrasaay@users.noreply.replit.com> 1776121808 +0000	commit: Update conversion system to use persona, language, and tone
+49589a39d846d023e39b0b2140859d2b3a604702 28586f8e06640c7495d48377ff713ea280a59149 chemistryrasaay <57662935-chemistryrasaay@users.noreply.replit.com> 1776124907 +0000	commit: Add audio playback and advanced theming options to the converter
+28586f8e06640c7495d48377ff713ea280a59149 899ec3f8156fa142f4e8682685553051c4923920 chemistryrasaay <57662935-chemistryrasaay@users.noreply.replit.com> 1776130765 +0000	commit: Update website with custom logo and fix mobile scrolling issues
