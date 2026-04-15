@@ -1,0 +1,88 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: convert
+    description: Text conversion operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /convert:
+    post:
+      operationId: convertText
+      tags: [convert]
+      summary: Convert text by persona, language, and tone
+      description: Takes input text, persona, language, language section, and tone, returns 5 variations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConvertTextBody"
+      responses:
+        "200":
+          description: Converted text variations
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConvertTextResponse"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    ConvertTextBody:
+      type: object
+      properties:
+        text:
+          type: string
+          minLength: 1
+        persona:
+          type: string
+          minLength: 1
+        language:
+          type: string
+          minLength: 1
+        languageSection:
+          type: string
+          minLength: 1
+        tone:
+          type: string
+          minLength: 1
+      required:
+        - text
+        - persona
+        - language
+        - languageSection
+        - tone
+    ConvertTextResponse:
+      type: object
+      properties:
+        variations:
+          type: array
+          items:
+            type: string
+      required:
+        - variations
